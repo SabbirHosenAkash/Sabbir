@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabbir Hosen Akash - Portfolio</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <nav class="navbar">
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-left" data-aos="fade-right">
+                <div class="profile-wrapper">
+                    <div class="rotating-ring"></div>
+                    <img src="sabbir.png" alt="Sabbir" class="profile-img">
+                </div>
+                <h3>Hello! I'm</h3>
+                <h1 class="name">Sabbir Hosen Akash</h1>
+                <h2 class="type-wrap">I'm a <span id="typing-effect"></span></h2>
+            </div>
+
+            <div class="hero-right" data-aos="fade-left">
+                <p class="bio">
+                    Sabbir Hosen Akash, popularly known as <strong>Writarion</strong>, is a Bangladeshi Musician, Writer, Web Developer, SEO Expert, keyboard player, and backing vocalist of the Oparok Band.
+                </p>
+                <div class="hero-actions">
+                    <div class="social-icons">
+                        <a href="https://facebook.com/sabbirh0senakash" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://youtube.com/c/sabbirhosenakash" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://instagram.com/sabbirhosenakash" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/SabbirHosenAkash" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://open.spotify.com/artist/your_id" target="_blank" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+                    </div>
+                    <a href="CV.png" download class="btn-download">Download CV <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="image-divider" data-aos="zoom-in">
+        <img src="about.png" alt="Sabbir Akash" class="about-pic">
+    </div>
+
+    <section id="services">
+        <h2 class="section-title" data-aos="fade-up">My <span>Services</span></h2>
+        <div class="grid-layout">
+            <div class="interactive-box 3d-card" data-aos="flip-left">
+                <i class="fas fa-search"></i>
+                <h3>SEO Optimization</h3>
+                <p>Advanced Search Engine Optimization to dominate search rankings and business growth.</p>
+            </div>
+            <div class="interactive-box 3d-card" data-aos="flip-up">
+                <i class="fas fa-code"></i>
+                <h3>Web Architecture</h3>
+                <p>Creating high-performance, responsive, and 3D interactive web experiences.</p>
+            </div>
+            <div class="interactive-box 3d-card" data-aos="flip-right">
+                <i class="fas fa-music"></i>
+                <h3>Music Composition</h3>
+                <p>Professional music production, arrangement, and global distribution services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title" data-aos="fade-up">Technical <span>Expertise</span></h2>
+        <div class="skills-3d-container">
+            <div class="skill-3d-card" data-aos="fade-right">
+                <div class="skill-name">SEO & Marketing</div>
+                <div class="skill-bar-3d"><div class="fill-3d" style="--width: 95%;"><span>95%</span></div></div>
+            </div>
+            <div class="skill-3d-card" data-aos="fade-left">
+                <div class="skill-name">Full Stack Web Dev</div>
+                <div class="skill-bar-3d"><div class="fill-3d" style="--width: 90%;"><span>90%</span></div></div>
+            </div>
+            <div class="skill-3d-card" data-aos="fade-right">
+                <div class="skill-name">Python Programming</div>
+                <div class="skill-bar-3d"><div class="fill-3d" style="--width: 85%;"><span>85%</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title" data-aos="fade-up">My <span>Projects</span></h2>
+        
+        <div class="project-container" data-aos="fade-up">
+            <div class="project-info">
+                <h3>Google Knowledge Panel Creation & Claiming</h3>
+                <p>I provide professional Google Knowledge Panel services for celebrities, authors, and organizations. Ensuring 100% white-hat SEO techniques for entity recognition and brand authority.</p>
+                <ul class="project-tags">
+                    <li><i class="fas fa-check-circle"></i> Entity Optimization</li>
+                    <li><i class="fas fa-check-circle"></i> Verification Support</li>
+                    <li><i class="fas fa-check-circle"></i> Stability Guarantee</li>
+                </ul>
+            </div>
+            <div class="project-visual">
+                <div class="swiper project-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="ss1.png" alt="Knowledge Panel 1"></div>
+                        <div class="swiper-slide"><img src="ss2.png" alt="Knowledge Panel 2"></div>
+                        <div class="swiper-slide"><img src="ss3.png" alt="Knowledge Panel 3"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-container reverse" data-aos="fade-up">
+            <div class="project-info">
+                <h3>Worldwide Music Distribution</h3>
+                <p>Distributing music to 150+ platforms including Spotify, Apple Music, and TikTok. Helping independent artists earn royalties and build a global presence.</p>
+                <div class="platform-logos">
+                    <i class="fab fa-spotify"></i>
+                    <i class="fab fa-itunes"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-amazon"></i>
+                </div>
+            </div>
+            <div class="project-visual music-visual">
+                <div class="floating-icons-box">
+                    <i class="fas fa-globe"></i>
+                    <i class="fas fa-headphones"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="music">
+        <h2 class="section-title" data-aos="fade-up">Musical <span>Journey</span></h2>
+        <div class="spotify-container" data-aos="zoom-in">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/your_artist_id" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="books">
+        <h2 class="section-title" data-aos="fade-up">Author <span>Gallery</span></h2>
+        <div class="grid-layout">
+            <div class="book-card 3d-card" data-aos="flip-left">
+                <img src="book1.png" alt="Whispers of the Heart">
+                <h3>Whispers of the Heart</h3>
+                <a href="https://books.google.com.sa/books?id=lyE2EQAAQBAJ" target="_blank" class="btn-link">Read Book</a>
+            </div>
+            <div class="book-card 3d-card" data-aos="flip-right">
+                <img src="book2.png" alt="On the Edge">
+                <h3>On the Edge of a Broken Bridge</h3>
+                <a href="https://books.google.com.sa/books?id=NphdEQAAQBAJ" target="_blank" class="btn-link">Read Book</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title" data-aos="fade-up">Academic <span>Background</span></h2>
+        <div class="grid-layout">
+            <div class="interactive-box edu-box" data-aos="fade-up">
+                <h3>HSC (2024)</h3>
+                <a href="https://www.ghabc.gov.bd/" target="_blank" class="inst-link">Govt Hazi A. B. College <i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <div class="interactive-box edu-box" data-aos="fade-up" data-aos-delay="200">
+                <h3>SSC (2022)</h3>
+                <a href="https://www.sohopathi.com/south-sandwip-ml-high-school/" target="_blank" class="inst-link">South Sandwip ML High School <i class="fas fa-external-link-alt"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="organisations">
+        <h2 class="section-title" data-aos="fade-up">Associated <span>Organisations</span></h2>
+        <div class="grid-layout">
+            <div class="interactive-box org-card" data-aos="zoom-in">
+                <div class="org-img-wrapper">
+                    <img src="oparok.png" alt="Oparok Band">
+                </div>
+                <h3>Oparok Band</h3>
+                <p>Keyboardist & Backing Vocalist</p>
+                <a href="https://facebook.com/oparok1" target="_blank" class="btn-link">Visit Page</a>
+            </div>
+            <div class="interactive-box org-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="org-img-wrapper">
+                    <img src="shopping.png" alt="Shopping City">
+                </div>
+                <h3>Shopping City</h3>
+                <p>Chief Executive Officer</p>
+                <a href="https://facebook.com/ShoppingCityOfficial" target="_blank" class="btn-link">Visit Page</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title" data-aos="fade-up">Get In <span>Touch</span></h2>
+        <div class="contact-card" data-aos="fade-up">
+            <form action="https://formsubmit.co/info.sabbirhosenakash@gmail.com" method="POST" id="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="send-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                <div id="form-status" style="margin-top: 10px; font-weight: bold;"></div>
+            </form>
+            <div class="contact-details">
+                <p><i class="fab fa-whatsapp"></i> +8801620302210</p>
+                <p><i class="fas fa-envelope"></i> info.sabbirhosenakash@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Sandwip, Chittagong</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Sabbir Hosen Akash. Crafted with <i class="fas fa-heart" style="color:red"></i> by Writarion.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
