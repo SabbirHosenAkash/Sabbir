@@ -1,0 +1,189 @@
+/* --- 1. Global Setup & Variables --- */
+:root {
+    --primary: #00ff88; 
+    --accent: #ff0000;
+    --bg: #030303;
+    --glass: rgba(255, 255, 255, 0.05);
+    --border: rgba(0, 255, 136, 0.2);
+    --text: #ffffff;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+#particles-js {
+    position: fixed; width: 100%; height: 100%; z-index: -1;
+}
+
+/* --- 2. Navbar Design --- */
+.navbar {
+    position: fixed; width: 100%; top: 0; z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 15px 10%; border-bottom: 1px solid var(--border);
+}
+
+#nav-links { display: flex; list-style: none; justify-content: center; }
+#nav-links li { margin: 0 15px; }
+#nav-links li a {
+    text-decoration: none; color: white; font-weight: 500;
+    text-transform: uppercase; font-size: 13px; transition: 0.3s;
+}
+#nav-links li a:hover { color: var(--primary); text-shadow: 0 0 10px var(--primary); }
+
+/* --- 3. Hero Section (Breathable - No Boxes) --- */
+.hero {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 120px 10% 60px;
+}
+.hero-container { 
+    display: flex; width: 100%; align-items: center; gap: 60px; 
+}
+
+/* Hero Left (Profile & Name) */
+.hero-left { flex: 1; text-align: center; }
+.profile-wrapper { 
+    position: relative; width: 240px; height: 240px; margin: 0 auto 20px; 
+    display: flex; align-items: center; justify-content: center; 
+}
+.profile-img { 
+    width: 200px; height: 200px; border-radius: 50%; object-fit: cover; 
+    z-index: 2; border: 5px solid var(--bg); 
+}
+.rotating-ring { 
+    position: absolute; width: 230px; height: 230px; border-radius: 50%; 
+    border: 4px solid transparent; border-top-color: var(--primary); 
+    border-bottom-color: var(--accent); animation: spin 3s linear infinite; z-index: 1; 
+}
+@keyframes spin { 100% { transform: rotate(360deg); } }
+
+.hero-left h3 { font-weight: 400; color: #ccc; margin-top: 10px; }
+.name { font-size: 3.5rem; margin: 5px 0; color: white; font-weight: 700; }
+.type-wrap { font-size: 1.5rem; font-weight: 400; color: #ddd; }
+#typing-effect { color: var(--primary); font-weight: 600; }
+
+/* Hero Right (Description & Socials) */
+.hero-right { flex: 1.2; text-align: left; }
+.bio { 
+    font-size: 1.15rem; line-height: 1.8; color: #ddd; margin-bottom: 30px;
+}
+.hero-actions { display: flex; flex-direction: column; gap: 25px; }
+
+.social-icons { display: flex; gap: 15px; }
+.social-icons a {
+    width: 45px; height: 45px; border-radius: 50%;
+    border: 1px solid var(--border); display: flex;
+    align-items: center; justify-content: center; color: white;
+    font-size: 1.2rem; transition: var(--transition);
+}
+.social-icons a:hover {
+    background: var(--primary); color: #000;
+    transform: translateY(-5px); box-shadow: 0 5px 15px var(--primary);
+}
+
+.btn-download {
+    width: fit-content; background: var(--primary); color: #000; 
+    padding: 14px 30px; border-radius: 50px; text-decoration: none; 
+    font-weight: 700; transition: var(--transition);
+}
+.btn-download:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
+
+/* --- 4. Section Titles --- */
+section { padding: 100px 10%; }
+.section-title { 
+    font-size: 2.8rem; text-align: center; margin-bottom: 60px; 
+    text-transform: uppercase; letter-spacing: 3px; 
+}
+.section-title span { color: var(--primary); text-shadow: 0 0 15px var(--primary); }
+
+/* --- 5. Glass Cards (Services & Others) --- */
+.grid-layout { 
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; 
+}
+.interactive-box {
+    background: var(--glass); backdrop-filter: blur(10px);
+    padding: 40px; border-radius: 25px; border: 1px solid var(--border);
+    text-align: center; transition: var(--transition); cursor: pointer;
+}
+.interactive-box:hover {
+    transform: translateY(-10px); background: rgba(0, 255, 136, 0.08);
+    border-color: var(--primary); box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+.interactive-box i { font-size: 45px; color: var(--primary); margin-bottom: 20px; }
+
+/* --- 6. Skills Section --- */
+.skills-3d-container { max-width: 800px; margin: 0 auto; }
+.skill-3d-card { margin-bottom: 35px; }
+.skill-bar-3d { 
+    height: 12px; background: #111; border-radius: 20px; position: relative; border: 1px solid #222;
+}
+.fill-3d {
+    height: 100%; background: linear-gradient(90deg, var(--primary), #0088ff);
+    border-radius: 20px; width: 0; transition: width 2s ease-in-out; position: relative;
+}
+.fill-3d span { position: absolute; right: 0; top: -30px; color: var(--primary); font-weight: bold; }
+
+/* --- 7. Project Cards --- */
+.project-container {
+    display: flex; align-items: center; gap: 40px; margin-bottom: 60px;
+    background: var(--glass); padding: 40px; border-radius: 30px; border: 1px solid var(--border);
+}
+.project-container.reverse { flex-direction: row-reverse; }
+.project-info h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+.project-visual { flex: 1; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+.swiper { width: 100%; height: 350px; }
+.swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+/* --- 8. Music & Books --- */
+.spotify-container { 
+    border-radius: 20px; overflow: hidden; border: 1px solid var(--primary); 
+    box-shadow: 0 0 30px rgba(0,255,136,0.2); 
+}
+.book-card img { 
+    width: 160px; height: 240px; border-radius: 10px; margin-bottom: 15px; 
+    border: 1px solid var(--border); object-fit: cover;
+}
+
+/* --- 9. Contact Card (Glass Style) --- */
+.contact-card {
+    display: grid; grid-template-columns: 1.5fr 1fr; gap: 40px;
+    background: var(--glass); padding: 50px; border-radius: 30px; border: 1px solid var(--border);
+}
+.form-group { display: flex; gap: 15px; }
+input, textarea {
+    width: 100%; padding: 15px; margin-bottom: 20px; background: rgba(0,0,0,0.5);
+    border: 1px solid var(--border); color: white; border-radius: 12px; outline: none;
+}
+input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 10px var(--primary); }
+.send-btn {
+    background: var(--primary); color: #000; padding: 15px 40px; border: none;
+    border-radius: 12px; font-weight: bold; cursor: pointer; transition: var(--transition);
+}
+
+/* --- 10. Responsive Design --- */
+@media (max-width: 992px) {
+    .hero-container, .project-container, .project-container.reverse, .contact-card { 
+        flex-direction: column; text-align: center; 
+    }
+    .hero-right { text-align: center; }
+    .hero-actions { align-items: center; }
+    .name { font-size: 2.8rem; }
+    .navbar #nav-links { 
+        display: none; flex-direction: column; position: absolute; 
+        top: 65px; left: 0; width: 100%; background: #000; padding: 20px; 
+    }
+    #nav-links.active { display: flex; }
+    .menu-btn { display: block; font-size: 28px; cursor: pointer; color: var(--primary); }
+}
+
+footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: #777; }
